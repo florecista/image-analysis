@@ -11,8 +11,9 @@ try:
     ]
 
     filelist = os.listdir('images')
+    sorted_filelist = sorted(filelist)
     pattern = re.compile(r'[.](jpg|jpeg|png)$', re.IGNORECASE)
-    for image_file in filelist[:]:
+    for image_file in sorted_filelist[:]:
         if re.search(pattern, image_file):
             unknown_image = face_recognition.load_image_file('images/' + image_file)
             unknown_face_encoding = face_recognition.face_encodings(unknown_image)[0]
