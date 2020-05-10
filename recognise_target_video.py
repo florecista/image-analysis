@@ -45,7 +45,7 @@ class recognize_target_video():
 
 def main():
     app = recognize_target_video()
-    result = app.findTarget("video/obama.mp4", "images_unknown/unknown40.jpg")
+    result = app.findTarget("video/Obama.mp4", "images_unknown/Obama.jpg")
     print('Target is in video : ' + str(result))
 
 if __name__ == "__main__":
